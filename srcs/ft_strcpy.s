@@ -8,7 +8,7 @@ ft_strcpy:
 	mov		rax, 0				; int rax = 0;
 
 copy_str:
-	cmp		BYTE [rsi + rax],0	; if (rsi[rax] == 0)
+	cmp		BYTE [rsi + rax], 0	; if (rsi[rax] == 0)
 	je		end					; 	goto end
 	mov		cl, [rsi + rax]		; cl = rsi[rax]
 	mov		[rdi + rax], cl		; rdi[rax] = cl
