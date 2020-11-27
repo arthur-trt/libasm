@@ -6,7 +6,7 @@
 /*   By: atrouill <atrouill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/27 21:37:08 by atrouill          #+#    #+#             */
-/*   Updated: 2020/11/27 22:58:26 by atrouill         ###   ########.fr       */
+/*   Updated: 2020/11/27 23:01:47 by atrouill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,6 @@ void	test_ft_strcpy()
 	char	str6[] = "Oups j'avais oublié la 6";
 	char	str7[] = "Est-ce que ces test ont encore une utilité ?";
 	char	str8[] = "Non. Tester c'est douter";
-	char	str9[] = "";
-	char	str10[] = "";
 
 	printf("\033[32m/* ************************************** */\n");
 	printf("/*               ft_strcpy                */\n");
@@ -211,7 +209,7 @@ void	test_ft_strdup(void)
 }
 
 
-int	main(int argc, char *argv[])
+int	main(void)
 {
 	test_ft_strlen();
 	errno = 0;

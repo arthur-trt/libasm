@@ -63,6 +63,7 @@ clean:
 #Full Clean, Objects and Binaries
 fclean: clean
 	@$(RM) -rf $(TARGET)
+	@$(RM) -f test_libasm
 
 #Pull in dependency info for *existing* .o files
 -include $(OBJECTS:.$(OBJEXT)=.$(DEPEXT))
@@ -78,6 +79,10 @@ $(BUILDDIR)/%.$(OBJEXT): $(SRCDIR)/%.$(SRCEXT)
 	$(NA) -o $@ $<
 	@$(ERASE)
 	@$(ERASE)
+
+test:	$(TARGET)
+	$(CC) $(CFLAGS) -o test_libasm main.c -L. -lasm
+
 
 norm:
 	@$(NORMINETTE) | $(GREP) -v "Not a valid file" | $(GREP) "Error\|Warning" -B 1 || true
