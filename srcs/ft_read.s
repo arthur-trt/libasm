@@ -24,7 +24,7 @@ ft_read:
 err:
 	neg		rax					; rax = -rax
 	mov		rdi, rax			; rdi = rax
-	call	__errno_location	; rerieve address of __erno_location
+	call	__errno_location  wrt ..plt	; rerieve address of __erno_location
 	mov		[rax], rdi			; put erno in return value of __erno_location
 	mov		rax, -1				; rax = -1
 	ret							; return rax
