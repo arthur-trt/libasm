@@ -15,16 +15,16 @@ extern __errno_location
 ; }
 
 ft_write:
-	mov 	rax, 1				; rax = 1
+	mov 		rax, 1				; rax = 1
 	syscall						; syscall -> store return in rax
 	cmp		rax, 0				; if (rax < 0)
-	jl		err					;	goto err
-	ret							; return (rax)
+	jl		err				;	goto err
+	ret						; return (rax)
 
 err:
-	neg		rax					; rax = -rax
+	neg		rax				; rax = -rax
 	mov		rdi, rax			; rdi = rax
-	call	__errno_location  wrt ..plt	; rerieve address of __erno_location
+	call		__errno_location  wrt ..plt	; rerieve address of __erno_location
 	mov		[rax], rdi			; put erno in return value of __erno_location
 	mov		rax, -1				; rax = -1
-	ret							; return rax
+	ret						; return rax
