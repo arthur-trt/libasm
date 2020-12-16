@@ -20,7 +20,7 @@ ft_strdup:
 	ret						; return rax
 
 err:
-	neg		rax					; rax = -rax
+	neg		rax				; rax = -rax
 	mov		rdi, rax			; rdi = rax
 	call		__errno_location  wrt ..plt	; rerieve address of __erno_location
 	mov		[rax], rdi			; put erno in return value of __erno_location
