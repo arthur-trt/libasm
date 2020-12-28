@@ -1,6 +1,6 @@
 #Compiler and Linker
-CC				:= clang-9
-NA				:= nasm -felf64
+CC			:= clang-9
+NA			:= nasm -felf64
 
 #The Target Binary Program
 TARGET			:= libasm.a
@@ -19,8 +19,8 @@ OBJECTS			:= $(patsubst $(SRCDIR)/%,$(BUILDDIR)/%,$(SOURCES:.$(SRCEXT)=.$(OBJEXT
 
 #Flags, Libraries and Includes
 CFLAGS			:= -Wall -Werror -Wextra
-LIB				:=
-INC				:= -I$(INCDIR) -I/usr/local/include
+LIB			:=
+INC			:= -I$(INCDIR) -I/usr/local/include
 INCDEP			:= -I$(INCDIR)
 
 # Colors
